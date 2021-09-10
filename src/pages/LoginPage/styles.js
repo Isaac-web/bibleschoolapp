@@ -11,18 +11,18 @@ export default makeStyles(theme => ({
         margin: "5px 8px"
     },
     container: {
-        minHeight: "100vh",
-        background: colors.backgroundLight
+        // minHeight: "100vh",
+        // background: colors.backgroundLight
     },
     logo: {
-        marginBottom: 20
+        marginBottom: 10
     },
     paper: {
         padding: "50px 20px"
     },
     paperWrapper: {
         maxWidth: 480,
-        marginTop: 100,
+        marginTop: 80,
     },
     signUpText: {
         fontSize: 13,

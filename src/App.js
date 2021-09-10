@@ -1,10 +1,15 @@
 import React from 'react';
-// import LoginPage from './pages/LoginPage/LoginPage';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
+
+
+import Header from './components/Header/Header';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 const App = () => {  
     return (
-       <RegisterPage/>
+        <>
+            <Header/>
+            <LoginPage/>
+        </>
     )
 }
 
