@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 export default makeStyles(theme => ({
     buttonWrapper: {
         padding: "15px 5px",
-        marginTop: 20
+        // marginTop: 20
     }, 
     logoContainer: {
         marginBottom: 30

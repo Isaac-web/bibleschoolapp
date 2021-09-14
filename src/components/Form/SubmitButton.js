@@ -6,7 +6,8 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const SubmitButton = ({children, customStyle}) => {
     const classes = useStyles();
-    const {handleSubmit} = useFormikContext();
+    const {handleSubmit, errors} = useFormikContext();
+
 
     return (
         <Grid item xs={12} className={classes.buttonWrapper}>

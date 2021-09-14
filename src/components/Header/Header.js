@@ -18,7 +18,7 @@ const Header = () => {
                <Box>
                    <Typography variant="h5" color="primary">oOo</Typography>
                </Box>
-               <Button className={classes.loginButton} color="primary" onClick={handleLoginButtonClick} startIcon={<AccountCircleOutlined/>} variant="contained">Sign In</Button>
+               <Button className={classes.loginButton} color="primary" onClick={handleLoginButtonClick}  variant="contained">Sign In</Button>
            </Toolbar>
         </AppBar>
         <div className={classes.headerMargin}/>

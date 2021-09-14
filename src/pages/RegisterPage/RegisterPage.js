@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container, Grid, Typography} from '@material-ui/core';
-import {Formik} from 'formik';
 import * as Yup from 'yup';
 
 import AppFormInput from '../../components/Form/AppFormInput';
@@ -16,7 +15,7 @@ const validationSchema = Yup.object().shape({
     confirmPassword: Yup.string().min(7).max(120).required().label("Password Confirmation"),
     email: Yup.string().email().required().required().label("Email"),
     phone: Yup.string().min(3).max(15).label("Phone"),
-    programOfStudy: Yup.string().min(3).max(15).label("Program Of Study"),   
+    programOfStudy: Yup.string().min(3).max(150).label("Program Of Study"),   
 });
 
 const initialState = {

@@ -1,15 +1,26 @@
 import React from 'react';
-import {Grid} from '@material-ui/core';
+import {Grid, useTheme} from '@material-ui/core';
 import {useFormikContext} from "formik";
 
-import AppInput from '../AppInput/AppInput';
+
+import Input from '../common/Input/Input';
 
 
-const AppFormInput = ({half, name, padding=true, ...rest}) => {
+const AppFormInput = ({half, name, padding=true, label, ...rest}) => {
+    const theme = useTheme();
     const {errors, touched, handleChange} = useFormikContext();
+    
     return (
-        <Grid item xs={half ? 6:12} style={{padding: padding ? 5 : 0}}>
-            <AppInput onChange={handleChange(name)} error={touched[name] && errors[name]} {...rest}/>
+        <Grid item xs={half ? 6:12} style={{padding: padding ? theme.spacing(1) : 0}}>
+            <Input 
+                id={name}
+                customLabel={label} 
+                hiddenLabel={true} 
+                fullWidth 
+                onChange={handleChange(name)} 
+                error={touched[name] && errors[name]} 
+                {...rest}
+            />
         </Grid>
     )
 }

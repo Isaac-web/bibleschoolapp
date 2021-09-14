@@ -40,8 +40,8 @@ const LoginPage = () => {
                                 <Typography variant="subtitle2" className={classes.welcomeSubText}>Enter your credentials to access your account</Typography>
                             </Grid>
 
-                            <AppFormInput  autoFocus  icon={<AccountCircle size="small"/>} name="email" placeholder="Email" style={{marginBottom: 10}}/>
-                            <AppFormInput  icon={<Lock size="small"/>} name="password" placeholder="Password" style={{marginBottom: 10}} type="password" />
+                            <AppFormInput  autoFocus  startIcon={<AccountCircle size="small" color="primary" style={{marginLeft: -3, marginRight: 3}}/>} name="email" placeholder="Email" style={{marginBottom: 10}}/>
+                            <AppFormInput  startIcon={<Lock size="small" color="primary" style={{marginLeft: -3, marginRight: 3}}/>} name="password" placeholder="Password" style={{marginBottom: 10}} type="password" />
                             <Grid item className={classes.buttonsWrapper} xs={12}>
                             <SubmitButton>Login</SubmitButton>
 
