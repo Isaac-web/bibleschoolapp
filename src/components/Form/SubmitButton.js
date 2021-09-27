@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const SubmitButton = ({children, customStyle}) => {
     const classes = useStyles();
-    const {handleSubmit, errors} = useFormikContext();
+    const {handleSubmit} = useFormikContext();
 
 
     return (

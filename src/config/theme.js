@@ -10,5 +10,8 @@ export default createTheme({
        secondary: {
            main: colors.secondary
        }
+   }, 
+   overrides:{
+       
    }
 })

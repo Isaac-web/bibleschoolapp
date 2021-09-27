@@ -1,6 +1,5 @@
 import React from 'react';
 import {AppBar, Box, Button, Toolbar, Typography,} from '@material-ui/core';
-import {AccountCircleOutlined} from '@material-ui/icons';
 
 import useStyles from './styles';
 

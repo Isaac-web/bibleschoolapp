@@ -1,16 +1,13 @@
 import React from 'react';
 
+import CoordinatorPage from './pages/CoordinatorPage/CoordinatorPage';
 
-import Header from './components/Header/Header';
-import RegisterPage from './pages/RegisterPage/RegisterPage';
+
 
 
 const App = () => {  
     return (
-        <>
-            <Header/>
-            <RegisterPage/>
-        </>
+        <CoordinatorPage/>
     )
 }
 
