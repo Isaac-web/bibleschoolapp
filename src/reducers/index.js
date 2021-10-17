@@ -1,14 +1,7 @@
 import {combineReducers} from 'redux';
+import modules from './modules';
+import currentModule from './currentModule';
 
 
 
-const test = (state = {test: "It is working..."}, action) => {
-    switch(action.type) {
-        default: 
-            return state;
-    }
-}
-
-
-
-export default combineReducers({test})
+export default combineReducers({modules, currentModule});

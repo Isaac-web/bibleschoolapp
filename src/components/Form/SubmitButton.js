@@ -4,20 +4,19 @@ import {useFormikContext} from 'formik';
 
 import {makeStyles} from '@material-ui/core/styles';
 
-const SubmitButton = ({children, customStyle}) => {
+const SubmitButton = ({children, customStyle, fullWidth,  ...rest}) => {
     const classes = useStyles();
     const {handleSubmit} = useFormikContext();
 
 
     return (
-        <Grid item xs={12} className={classes.buttonWrapper}>
+        <Grid item xs={fullWidth && 12} className={classes.buttonWrapper}>
             <Button 
-                className={`${classes.SubmitButton} ${customStyle}`} 
-                color="primary" 
-                fullWidth 
+                className={`${classes.SubmitButton} ${customStyle}`}  
                 onClick={handleSubmit} 
                 type="submit" 
-                variant="contained"
+                fullWidth={fullWidth}
+                {...rest}
             >
                 {children}
             </Button>

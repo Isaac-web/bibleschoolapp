@@ -1,13 +1,15 @@
 import React from 'react';
 
-import CoordinatorPage from './pages/CoordinatorPage/CoordinatorPage';
-
-
+import Modules from './pages/Coordinator/Modules/ModulesPage';
+import Header from './components/Header/Header';
 
 
 const App = () => {  
     return (
-        <CoordinatorPage/>
+        <>
+            <Header/>
+            <Modules/>
+        </>
     )
 }
 

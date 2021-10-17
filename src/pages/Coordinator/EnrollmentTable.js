@@ -24,7 +24,9 @@ const EnrollmentTable = () => {
     }
 
 
-    const handleFilter = option => setFilter(option);
+    const handleFilter = option => {
+        setFilter(option)
+    };
 
 
     const handleSearch = (value) => {
@@ -50,7 +52,7 @@ const EnrollmentTable = () => {
 
 
     const sortedEnrollments = _.orderBy(enrollments, [sortColumn.path], [sortColumn.order]);
-    const filteredEnrollments = filter ? sortedEnrollments.filter(s => s.status === filter) : sortedEnrollments;
+    const filteredEnrollments = filter !== undefined ? sortedEnrollments.filter(s => s.status === filter) : sortedEnrollments;
     const searchResults = filteredEnrollments.filter(f => f.name.trim().toLowerCase().includes(search.trim().toLowerCase()))
     return (
           <TableContainer>

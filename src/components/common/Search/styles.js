@@ -7,7 +7,7 @@ export default makeStyles(theme => ({
         borderRadius: 12,
         fontSize: 16,
         color: theme.palette.grey[600],
-        height: 50,
+        height: 42,
         "&$focused": {
             backgroundColor: theme.palette.grey[200],
         }, 

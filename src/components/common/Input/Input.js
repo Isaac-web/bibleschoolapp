@@ -13,6 +13,7 @@ const Input = ({customLabel, error, id, startIcon, ...rest}) => {
                 id={id}
                 className={classes.container}
                 helperText={error}
+                hiddenLabel
                 error={error ? true: false}
                 InputProps={{
                     classes, 

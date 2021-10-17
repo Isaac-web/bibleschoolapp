@@ -4,8 +4,16 @@ import {TextField} from '@material-ui/core';
 
 import useStyles from './styles';
 
-const Search = ({value, onSearch}) => {
+const Search = ({value, onSearch, ...rest}) => {
     const classes = useStyles();
+
+    const raiseSearch = ({target:input}) => {
+        if(typeof onSearch !== "function") 
+            return console.error("onSearch is not a function.");
+        onSearch(input.value.trim().toLowerCase());
+    }
+
+
     return (
         <TextField 
             variant="filled" 
@@ -14,7 +22,7 @@ const Search = ({value, onSearch}) => {
             hiddenLabel 
             value={value} 
             InputProps={{disableUnderline: true, classes: classes}}
-            onChange={({target:input}) => onSearch(input.value)}
+            onChange={raiseSearch}
         />
     )
 }
